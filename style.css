@@ -1,0 +1,345 @@
+body{
+    padding 0;
+    margin: 0;
+    line-height:150%;
+    color: #330000;
+    background: rgba(253,245,230, 0.3);
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #330000;
+}
+a:hover{
+    text-decoration: underline;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: #00BFFF;
+    overflow: hidden;
+}
+#header-title{
+    float: left;
+    color: #F5FFFA;
+    font-size: 28px;
+    line-height: 100px;
+    margin-left: 50px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+#header-title a{
+    color: #F5FFFA;
+}
+#header-title a:hover{
+    text-decoration: none;
+}
+#top-nav{
+    float: right;
+    overflow: hidden;
+    margin-right: 20px;
+}
+#top-nav ul{
+    float: right;
+    overflow: hidden;
+    margin: 0;
+}
+#top-nav li{
+    float: right;
+    list-style: none;
+}
+#top-nav a{
+    display: block;
+    height: 100px;
+    color: #F5FFFA;
+    padding: 0 10px;
+    margin-right: 20px;
+    line-height: 100px;
+}
+#top-nav a:hover{
+    color: #00BFFF;
+    background: #F5FFFA;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid #00BFFF;
+}
+
+.site-width{
+    width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.sidebar{
+    float: left;
+    margin-top: 126px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+    height: 500px;
+    background: #eee;
+}
+.sidebar ul{
+   padding: 10px;
+}
+.sidebar ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.sidebar ul li a{
+    padding: 10px ;
+}
+.index{
+    width: 60%;
+    float: left;
+}
+.h2-title{
+    font-size: 36px;
+    line-height: 150%;
+    margin-top: 100px;
+}
+.explain{
+    margin-top: 30px;
+    line-height: 200%;
+    font-size: 20px;
+}
+.btn-signup{
+    display: block;
+    width: 300px;
+    height: 80px;
+    background: #330000;
+    padding: 20px 10px;
+    text-align: center;
+    line-height: 40px;
+    color: aliceblue;
+    box-sizing: border-box;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border-radius: 80px;
+}
+.btn-signup:hover{
+    text-decoration: none;
+}
+.index-img{
+    width: 40%;
+    margin-top: 150px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+.index-img img{
+    width: 100%;
+}
+.title{
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-container{
+    width: 40%;
+    margin:80px auto;
+    padding: 30px;
+    border: 7px solid #CCCCCC;
+    min-height: 300px;
+}
+.form{
+overflow: hidden;
+}
+label{
+    display: block;
+}
+input[type="text"], input[type="password" ], input[type='date']{
+    width:100%;
+    height: 50px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    float: right;
+    color: #F5FFFA;
+    background: #330000;
+    border: none;
+    box-sizing: border-box;
+    display:block;
+}
+input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    vertical-align: middle;
+}
+#pass-reminder{
+    color: #2EA0E3;
+}
+#comment{
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+footer{
+    width: 100%;
+    height: 80px;
+    color: #F5FFFA;
+    background: #00BFFF;
+    text-align: center;
+    line-height: 80px;
+}
+.area-msg{
+    color: #FF0033;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+.btn-container{
+    overflow: hidden;
+    width: 100%;
+}
+#view-list{
+    float: left;
+    width: 40%;
+    margin: 80px 0 100px 30%;
+}
+#make-to-do-list, #withdraw{
+    width: 40%;
+    margin: 80px auto;
+    margin-bottom: 100px;
+}
+.passRemind{
+    width: 45%;
+    margin: 80px auto;
+    margin-bottom: 100px;
+}
+#btn-withdraw{
+    width: 150px;
+    margin: 30px auto;
+}
+.to-do-list-form{
+    padding: 40px;
+    border: 3px solid #00BFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.to-do-list-form input, .to-do-list-form textarea{
+    border-radius: 3px;
+}
+.nav-wrapper{
+    overflow: hidden;
+    width: 100%;
+    margin: 10px 0;
+}
+.nav-wrapper p{
+    text-align: center;
+    font-size: 26px;
+}
+.nav-wrapper p a{
+    font-size: 20px;
+}
+.nav-left{
+    font-size: 24px;
+    float: left;
+}
+.nav-right{
+    float: right;
+}
+.nav-right a{
+    font-size: 18px;
+}
+#counter{
+    width:100%;
+    text-align: right;
+}
+.panel{
+    border: 3px solid #00BFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.panel-left{
+    float: left;
+    width: 80%;
+}
+.panel-right{
+    float: right;
+}
+.panel-left p{
+    padding-bottom: 10px;
+}
+.list-comment{
+    overflow: hidden;
+}
+.list-comment p{
+    float: left;
+}
+.edit-list{
+    float:left;
+}
+.fas{
+    padding: 0 5px;
+    margin-right: 5px;
+}
+.slide-msg{
+    width: 640px;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #4dd0ea;
+    background: #ffffff;
+    text-align: center;
+    line-height: 70px;
+    border: 3px solid #4dd0ea;
+    border-radius: 10px;
+}
+
+.pagenation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pagenation-list{
+    overflow: hidden;
+    padding-left: 0;
+}
+.pagenation-list li{
+    float: left;
+    list-style: none;
+}
+.pagenation-list a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 10px;
+    background: #330000;
+    color: #F5FFFA;
+    float: left;
+}
+.pagenation-list a:hover{
+    text-decoration: none;
+    color: #330000;
+    background: #EEEEEE;
+    border: 1px solid rgba(3,0,0,0.4);
+    box-sizing: border-box;
+}
+.pagenation-list .active a{
+    color: #330000;
+    background: #EEEEEE;
+    border: 1px solid rgba(3,0,0,0.4);
+    box-sizing: border-box;
+}
