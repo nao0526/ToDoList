@@ -6,23 +6,25 @@ debug('「「「「「「「「「「「「「「「「「「「「「「「「�
 debugLogstart();
 
 require('auth.php');
-
+// GET送信の値にページ番号以外が入力された場合の改ざんチェック
 if(!empty($_GET['p']) && !(int)$_GET['p']){
     debug('不正な値が入りました');
     header("Location:to-do-view.php");
     exit;
 }
+// 現在のページ番号を変数に格納
 $currentPageNum = !empty($_GET['p']) ? $_GET['p'] : 1;
-
+// 1ページあたりに表示するToDoListの数を定義
 $listSpan = 5;
-
+// 現在の表示レコード先頭を算出
 $carrentMinNum = ($currentPageNum - 1) * $listSpan;
-
-$viewData = getToDoList($carrentMinNum);
 debug('$carrentMinNum'.$carrentMinNum);
+// 表示するToDoListデータをDBから取得
+$viewData = getToDoList($carrentMinNum);
 debug('取得した情報'.print_r($viewData, true));
+// 存在しないページ番号を入力された際の改ざんチェック
 if($currentPageNum > 1 && empty($viewData['data'][0])){
-    debug('不正な値が入りまし');
+    debug('不正な値が入りました');
     header("Location:to-do-view.php");
     exit;
 }

@@ -18,7 +18,7 @@ debug('画面表示処理終了<<<<<<<<<<<<<<<<<<<<<<<<<<<');
     <?php
     require('header.php');
     ?>
-    <div id="main" class="site-width">
+    <div id="main" class="site-width" style="width: 980px;">
         <div class="index">
             <h2 class="h2-title">やることが多すぎて<br>なにからやればいいかわからない...</h2>
             <p class="explain">

@@ -1,29 +1,27 @@
 <footer id="footer">
-    Copyright ©️ <a href="https://twitter.com/naooooo7010" style="color: #F5FFFA;">@naooooo7010</a> All Rights Reserved.
+    Copyright ©️ To Do List! All Rights Reserved.
 </footer>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script>
-    window.addEventListener('DOMContentLoaded', function(){
+    $(function(){
         // フッターを画面下部に固定
-        var $ftr = document.getElementById('footer');
-        if(window.innerHeight > $ftr.offsetTop + $ftr.offsetHeight){
-            $ftr.setAttribute('style', 'position: fixed; top: ' + (window.innerHeight - $ftr.offsetHeight) + 'px');
+        var $ftr = $('#footer');
+        if(window.innerHeight > $ftr.offset().top + $ftr.outerHeight()){
+            $ftr.attr('style', 'position: fixed; top: ' + (window.innerHeight - $ftr.outerHeight()) + 'px');
         }
         // 文字数カウンター
-        var $comment = document.getElementById('comment');
-        if($comment !== null){
-            $comment.addEventListener('keyup', function(){
-                var $counter = document.getElementById('counter')
-                var count = this.value.length;
+        var $comment = $('#comment');
+        $comment.on('keyup', function(){
+            var $counter = $('#counter')
+            var count = this.value.length;
 
-                $counter.firstChild.textContent= count;
-                if(count > 100){
-                    $counter.style.color = '#FF0033';
-                } else{
-                    $counter.style.color = '#330000';
-                }
-            }, false);
-        }
+            $counter.firstChild.textContent= count;
+            if(count > 100){
+                $counter.style.color = '#FF0033';
+            } else{
+                $counter.style.color = '#330000';
+            }
+        });
         // サクセスメッセージ表示
         var $jsShowMsg = $('#js-show-msg');
         var msg = $jsShowMsg.text();
@@ -48,7 +46,7 @@
                             data:{todoId : todoId}
                         }).done(function ( data ){
                             console.log('success')
-                                location.reload();
+                            location.reload();
                         }).fail(function ( msg ){
                             console.log('error')
                         });
@@ -56,7 +54,7 @@
                 }
             });
         }
-    }, false);
+    });
 </script>
 </body>
 </html>
