@@ -147,13 +147,12 @@ function validLength($str, $key, $length= 8){
 }
 //バリデーション関数（日時チェック）
 function validTime($str, $key){
-    list($Y, $m, $d) = explode('-', $str);
-    
-    if(mb_strlen($Y) > 4){
-        global $err_msg;
+    global $err_msg;
+    if (!preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $str)) {
         $err_msg[$key] = MSG13;
     }
 }
+// パスワードバリデーション関数
 function validPass($str, $key){
     validMaxlen($str, $key);
     validHalf($str, $key);
