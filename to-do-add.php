@@ -164,7 +164,7 @@ debug('画面表示処理終了<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<');
                     備考
                     <textarea id="comment" name="comment" id="" cols="30" rows="10"><?php echo getFormData('comment')?></textarea>
                 </label>
-                <div id="counter"><span>0</span>/100</div>
+                <div id="counter"><span><?php echo !empty(getFormData('comment')) ? mb_strlen(getFormData('comment')) : '0'; ?></span>/100</div>
                 <div class="area-msg">
                     <?php 
                     if(!empty($err_msg['comment'])) echo  $err_msg['comment']; 
