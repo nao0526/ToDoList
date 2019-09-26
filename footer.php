@@ -12,14 +12,14 @@
         // 文字数カウンター
         var $comment = $('#comment');
         $comment.on('keyup', function(){
-            var $counter = $('#counter')
+            var $counter = $('#counter');
             var count = this.value.length;
 
-            $counter.firstChild.textContent= count;
+            $counter.children().text(count);
             if(count > 100){
-                $counter.style.color = '#FF0033';
+                $counter.css('color', '#FF0033');
             } else{
-                $counter.style.color = '#330000';
+                $counter.css('color', '#330000');
             }
         });
         // サクセスメッセージ表示
