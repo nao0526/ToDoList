@@ -152,7 +152,6 @@ function validTime($str, $key){
         $err_msg[$key] = MSG13;
     }
 }
-// パスワードバリデーション関数
 function validPass($str, $key){
     validMaxlen($str, $key);
     validHalf($str, $key);
@@ -163,9 +162,9 @@ function validPass($str, $key){
 //================================
 //DB接続関数
 function dbConnect(){
-    $dsn = 'mysql:dbname=to_do_list;host=localhost;charset=utf8';
-    $user = 'root';
-    $password = 'root';
+    $dsn = 'mysql:dbname=nikeda7010_todolist;host=mysql8018.xserver.jp;charset=utf8';
+    $user = 'nikeda7010_user';
+    $password = 'Nikeda7010';
     $options = array(
         PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -249,7 +248,7 @@ function getToDoList($currentMinNum = 1, $span = 5){
             return false;
         }
         
-        $sql = 'SELECT id, todo, limit_date, comment FROM to_do WHERE user_id = :user_id AND delete_flg = 0 ORDER BY limit_date ASC LIMIT '.$span.' OFFSET '.$currentMinNum;
+        $sql = 'SELECT id, todo, limit_date, comment FROM to_do WHERE user_id = :user_id AND delete_flg = 0 ORDER BY limit_date IS NULL ASC, limit_date ASC LIMIT '.$span.' OFFSET '.$currentMinNum;
         $data = array(':user_id' => $_SESSION['user_id']);
         $stmt = queryPost($dbh, $sql, $data);
 
